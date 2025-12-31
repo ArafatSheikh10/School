@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+    --breakpoint-xs: 575px;
+    --font-primary: "Open Sans", sans-serif; 
+}
+
+
+/* ------------ Header Area Start ---------------- */
+
+.nav-menu li a.active{
+    color: #ffffff;
+}
+
+.nav-menu li a.active::after {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav-menu li a::after{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ------------ Header Area End ---------------- */
+
+
+
+
+
+
+/* ------------ sidebar Area Start ---------------- */
+
+.sidebar.slide_menu{
+    left: 0;
+}
+
+/* ------------ sidebar Area End ---------------- */
+
+
+
+
+
+
+
+
+/* ------------ Video Area Start ---------------- */
+
+.wrapper {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+  }
+  
+.wrapper .circle {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    margin: auto;
+    transform: scale(1, 1);
+}
+  
+.wrapper .circle.pulse {
+    animation-timing-function: ease;
+    animation: pulse 2s infinite;
+    background-color: #ffffff62;
+}
+  
+.wrapper svg {
+    fill: #ffffff;
+    stroke-width: 3;
+    transition: all 0.3s;
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.2, 1.2);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+}
+
+/* ------------ Video Area End ---------------- */
+
+
+
+
+
+
+
+/* ------------ News Area Start ---------------- */
+
+/* Chrome, Safari, Edge, Opera */
+.search_box input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+  
+/* Firefox */
+.search_box input[type="search"] {
+  -moz-appearance: textfield;
+}
+  
+/* Hide the search input's native clear button */
+.search_box input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* ------------ News Area End ---------------- */
+
+
+
+
+
+
+
+
+
+/* ------------ School Area Wraper Start ---------------- */
+
+.school-area__wraper .owl-nav.disabled{
+    display: flex;
+}
+
+.school-area__wraper .owl-nav{
+    width: 100%;
+    font-size: 30px;
+    color: var(--white-color);
+    z-index: 10;
+}
+
+.school-area__wraper .owl-nav button{
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #0193dc98 !important;
+    border-radius: 7px;
+}
+
+.school-area__wraper .owl-nav button span{
+    font-size: 50px !important;
+    color: #ffffff !important;
+    margin-top: -10px;
+}
+
+.school-area__wraper .owl-nav .owl-prev{
+    position: absolute !important;
+    left: -1.7% !important;
+    top: 50% !important;
+    transform: translateY(-58%) !important;
+}
+
+.school-area__wraper .owl-nav .owl-next{
+    position: absolute !important;
+    right: -1.7% !important;
+    top: 50% !important;
+    transform: translateY(-58%) !important;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+  .school-area__wraper .owl-nav .owl-prev{
+    left: 1% !important;
+  }
+  
+  .school-area__wraper .owl-nav .owl-next{
+    right: 1% !important;
+  }
+  
+}
+
+
+/* ------------ School Area Wraper End ---------------- */
+
+
+
+
+
+
+
+
+
+
+/* ------------ Table Area Start ---------------- */
+
+.info-table::-webkit-scrollbar-track{
+    background-color: #F3F3F3;
+}
+
+.info-table::-webkit-scrollbar{
+    height: 3px;
+    background-color: #2BA7E2;
+}
+
+.info-table::-webkit-scrollbar-thumb{
+    background-color: #2BA7E2;
+}
+
+
+/* ------------ Table Area End ---------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------ Pagination Area Start ---------------- */
+
+.pagination li a.active{
+    color: #ffffff;
+    background-color: #2BA7E2;
+}
+
+/* ------------ Pagination Area End ---------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------ Option Area Start ---------------- */
+
+
+
+.option-area .nice-select{
+    padding: 10px 20px;
+    width: 180px;
+    height: 42px;
+    font-size: 16px;
+    color: black;
+    font-family: var(--font-primary);
+    background-color: #F9FBFD;
+    border: 1px solid #ECECEC;
+    border-radius: 8px;
+    overflow: none;
+}
+
+.option-area  .nice-select:hover, .nice-select:focus, .nice-select::selection{
+    border-color: #2BA7E2;
+}
+
+.option-area .current {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.option-area  .nice-select .list {
+    width: 100%;
+    background-color: transparent;
+    border-radius: 5px;
+    background-color: #B9CAFF;
+}
+
+.option-area .nice-select .option {
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff; 
+}
+
+.option-area .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+    background-color: #2BA7E2;
+}
+ 
+.option-area .nice-select:after {
+    border-bottom: 2px solid #DFDFDF;
+    border-right: 2px solid #DFDFDF;
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-top: -10px;
+    pointer-events: none;
+    position: absolute;
+    right: 20px;
+}
+
+
+/* ------------ Option Area End ---------------- */
